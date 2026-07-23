@@ -83,21 +83,28 @@ Gold   RAG
 
 # Project Structure
 
+# Project Structure
+
 ```text
 electricity-pj/
 │
 ├── README.md
 ├── docker-compose.yml
+├── Dockerfile
 ├── requirements.txt
 ├── .gitignore
 │
 ├── dags/
 │   ├── capstone_dag.py
+│   ├── main.py
 │   ├── producer.py
 │   ├── consumer.py
 │   ├── lakehouse.py
 │   ├── quality_gate.py
-│   └── rag_pipeline.py
+│   ├── rag_pipeline.py
+│   ├── lineage_utils.py
+│   ├── schemas.py
+│   └── Global Energy Management Guide.pdf
 │
 ├── evidence/
 │   ├── run prof.txt
