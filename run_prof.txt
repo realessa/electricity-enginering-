@@ -1,0 +1,187 @@
+[START] Starting pipeline
+/opt/airflow/project/dags/main.py:13: DeprecationWarning: value_serializer does not implement kafka.serializer.Serializer
+  run_producer()
+✅ Sent M001
+✅ Sent M002
+❌ Rejected
+❌ Rejected M006
+
+Accepted: 2 | Rejected: 2
+Consumed: {'meter_id': 'M001', 'building': 'Building_A', 'consumption_kwh': 18.5, 'timestamp': '2026-07-23T02:23:38.482708'}
+Consumed: {'meter_id': 'M002', 'building': 'Building_B', 'consumption_kwh': 22.1, 'timestamp': '2026-07-23T02:23:38.482714'}
+Consumed: {'meter_id': 'M001', 'building': 'Building_A', 'consumption_kwh': 18.5, 'timestamp': '2026-07-23T02:23:53.484709'}
+Consumed: {'meter_id': 'M002', 'building': 'Building_B', 'consumption_kwh': 22.1, 'timestamp': '2026-07-23T02:23:53.484717'}
+Consumed: {'meter_id': 'M001', 'building': 'Building_A', 'consumption_kwh': 18.5, 'timestamp': '2026-07-23T02:26:26.684590'}
+Consumed: {'meter_id': 'M002', 'building': 'Building_B', 'consumption_kwh': 22.1, 'timestamp': '2026-07-23T02:26:26.684597'}
+Consumed: {'meter_id': 'M001', 'building': 'Building_A', 'consumption_kwh': 18.5, 'timestamp': '2026-07-23T02:32:03.614168'}
+Consumed: {'meter_id': 'M002', 'building': 'Building_B', 'consumption_kwh': 22.1, 'timestamp': '2026-07-23T02:32:03.614176'}
+Consumed: {'meter_id': 'M001', 'building': 'Building_A', 'consumption_kwh': 18.5, 'timestamp': '2026-07-23T02:40:06.262699'}
+Consumed: {'meter_id': 'M002', 'building': 'Building_B', 'consumption_kwh': 22.1, 'timestamp': '2026-07-23T02:40:06.262711'}
+Consumed: {'meter_id': 'M001', 'building': 'Building_A', 'consumption_kwh': 18.5, 'timestamp': '2026-07-23T02:41:24.762657'}
+Consumed: {'meter_id': 'M002', 'building': 'Building_B', 'consumption_kwh': 22.1, 'timestamp': '2026-07-23T02:41:24.762671'}
+Total consumed: 12
+WARNING: Using incubator modules: jdk.incubator.vector
+:: loading settings :: url = jar:file:/home/airflow/.local/lib/python3.11/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/airflow/.ivy2.5.2/cache
+The jars for the packages stored in: /home/airflow/.ivy2.5.2/jars
+io.delta#delta-spark_4.1_2.13 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-ed778ea8-0d54-4987-a371-7bce01ce2d53;1.0
+        confs: [default]
+        found io.delta#delta-spark_4.1_2.13;4.3.1 in central
+        found io.delta#delta-storage;4.3.1 in central
+        found io.unitycatalog#unitycatalog-client;0.5.0 in central
+        found org.slf4j#slf4j-api;2.0.13 in central
+        found org.apache.logging.log4j#log4j-slf4j2-impl;2.25.3 in central
+        found org.apache.logging.log4j#log4j-api;2.25.3 in central
+        found com.google.code.findbugs#jsr305;3.0.2 in central
+        found io.unitycatalog#unitycatalog-hadoop;0.5.0 in central
+        found org.apache.logging.log4j#log4j-core;2.25.3 in central
+        found io.delta#delta-kernel-api;4.3.1 in central
+        found org.roaringbitmap#RoaringBitmap;0.9.25 in central
+        found com.fasterxml.jackson.core#jackson-databind;2.13.5 in central
+        found com.fasterxml.jackson.core#jackson-annotations;2.13.5 in central
+        found com.fasterxml.jackson.core#jackson-core;2.13.5 in central
+        found com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.13.5 in central
+        found org.roaringbitmap#shims;0.9.25 in central
+        found io.delta#delta-kernel-defaults;4.3.1 in central
+        found org.apache.hadoop#hadoop-client-runtime;3.4.2 in central
+        found org.apache.parquet#parquet-hadoop;1.16.0 in central
+        found org.apache.parquet#parquet-column;1.16.0 in central
+        found org.apache.parquet#parquet-common;1.16.0 in central
+        found org.apache.parquet#parquet-format-structures;1.16.0 in central
+        found javax.annotation#javax.annotation-api;1.3.2 in central
+        found org.apache.parquet#parquet-encoding;1.16.0 in central
+        found org.locationtech.jts#jts-core;1.20.0 in central
+        found org.xerial.snappy#snappy-java;1.1.10.7 in central
+        found io.airlift#aircompressor;2.0.2 in central
+        found commons-pool#commons-pool;1.6 in central
+        found com.github.luben#zstd-jni;1.5.7-3 in central
+        found org.apache.hadoop#hadoop-client-api;3.4.2 in central
+        found commons-logging#commons-logging;1.3.0 in central
+        found org.apache.parquet#parquet-jackson;1.16.0 in central
+        found io.delta#delta-kernel-unitycatalog;4.3.1 in central
+:: resolution report :: resolve 1257ms :: artifacts dl 57ms
+        :: modules in use:
+        com.fasterxml.jackson.core#jackson-annotations;2.13.5 from central in [default]
+        com.fasterxml.jackson.core#jackson-core;2.13.5 from central in [default]
+        com.fasterxml.jackson.core#jackson-databind;2.13.5 from central in [default]
+        com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.13.5 from central in [default]
+        com.github.luben#zstd-jni;1.5.7-3 from central in [default]
+        com.google.code.findbugs#jsr305;3.0.2 from central in [default]
+        commons-logging#commons-logging;1.3.0 from central in [default]
+        commons-pool#commons-pool;1.6 from central in [default]
+        io.airlift#aircompressor;2.0.2 from central in [default]
+        io.delta#delta-kernel-api;4.3.1 from central in [default]
+        io.delta#delta-kernel-defaults;4.3.1 from central in [default]
+        io.delta#delta-kernel-unitycatalog;4.3.1 from central in [default]
+        io.delta#delta-spark_4.1_2.13;4.3.1 from central in [default]
+        io.delta#delta-storage;4.3.1 from central in [default]
+        io.unitycatalog#unitycatalog-client;0.5.0 from central in [default]
+        io.unitycatalog#unitycatalog-hadoop;0.5.0 from central in [default]
+        javax.annotation#javax.annotation-api;1.3.2 from central in [default]
+        org.apache.hadoop#hadoop-client-api;3.4.2 from central in [default]
+        org.apache.hadoop#hadoop-client-runtime;3.4.2 from central in [default]
+        org.apache.logging.log4j#log4j-api;2.25.3 from central in [default]
+        org.apache.logging.log4j#log4j-core;2.25.3 from central in [default]
+        org.apache.logging.log4j#log4j-slf4j2-impl;2.25.3 from central in [default]
+        org.apache.parquet#parquet-column;1.16.0 from central in [default]
+        org.apache.parquet#parquet-common;1.16.0 from central in [default]
+        org.apache.parquet#parquet-encoding;1.16.0 from central in [default]
+        org.apache.parquet#parquet-format-structures;1.16.0 from central in [default]
+        org.apache.parquet#parquet-hadoop;1.16.0 from central in [default]
+        org.apache.parquet#parquet-jackson;1.16.0 from central in [default]
+        org.locationtech.jts#jts-core;1.20.0 from central in [default]
+        org.roaringbitmap#RoaringBitmap;0.9.25 from central in [default]
+        org.roaringbitmap#shims;0.9.25 from central in [default]
+        org.slf4j#slf4j-api;2.0.13 from central in [default]
+        org.xerial.snappy#snappy-java;1.1.10.7 from central in [default]
+        :: evicted modules:
+        org.slf4j#slf4j-api;2.0.17 by [org.slf4j#slf4j-api;2.0.13] in [default]
+        org.slf4j#slf4j-api;1.7.36 by [org.slf4j#slf4j-api;2.0.13] in [default]
+        org.slf4j#slf4j-api;1.7.33 by [org.slf4j#slf4j-api;2.0.13] in [default]
+        org.xerial.snappy#snappy-java;1.1.10.4 by [org.xerial.snappy#snappy-java;1.1.10.7] in [default]
+        ---------------------------------------------------------------------
+        |                  |            modules            ||   artifacts   |
+        |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+        ---------------------------------------------------------------------
+        |      default     |   37  |   0   |   0   |   4   ||   33  |   0   |
+        ---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-ed778ea8-0d54-4987-a371-7bce01ce2d53
+        confs: [default]
+        0 artifacts copied, 33 already retrieved (0kB/27ms)
+26/07/23 02:41:48 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/07/23 02:42:01 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+✅ Silver Layer Created
+
+--- Schema Enforcement Test (expected to fail) ---
+✅ Schema enforcement PASSED - invalid schema rejected
+[DELTA_FAILED_TO_MERGE_FIELDS] Failed to merge fields 'consumption_kwh' and 'consumption_kwh'
+26/07/23 02:42:30 WARN MapPartitionsRDD: RDD 43 was locally checkpointed, its lineage has been truncated and cannot be recomputed after unpersisting
+✅ MERGE into Silver complete
+✅ Gold Layer Created
+🔍 Quality Gate: checking 13 rows
+⚠️ Warning: 10 duplicate meter_ids found (non-blocking)
+✅ Quality Gate PASSED
+[RAG] Running RAG...
+📄 Pages: 5 | Chunks: 12
+/opt/airflow/project/dags/rag_pipeline.py:32: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the `langchain-huggingface package and should be used instead. To use it run `pip install -U `langchain-huggingface` and import as `from `langchain_huggingface import HuggingFaceEmbeddings``.
+  embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 1054.53it/s]
+✅ Vector Database Created
+Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████| 105/105 [00:00<00:00, 653.85it/s]
+
+🧠 Answer:
+
+Based on the retrieved documents:
+
+Question:
+What are the benefits of smart meters?
+
+Relevant information:
+[Source 1 | page 0]
+A modern energy management system combines smart meters, sensors, data analytics,
+and automation to monitor electricity consumption in real time.
+
+Smart Electricity Meters
+Smart electricity meters automatically record electricity usage in kilowatt-hours (kWh).
+Unlike traditional meters, smart meters transmit readings digitally to centralized systems at
+regular intervals.
+Benefits of smart meters include:
+• Real-time monitoring
+• Accurate billing
+• Remote meter reading
+
+[Source 2 | page 0]
+Global Energy Management Guide
+Introduction
+Energy management is the process of planning, monitoring, controlling, and improving
+energy use in residential, commercial, and industrial facilities. Effective energy
+management helps organizations reduce operational costs, improve efficiency, lower
+greenhouse gas emissions, and support long-term sustainability goals.
+A modern energy management system combines smart meters, sensors, data analytics,
+
+[Source 3 | page 1]
+Energy efficiency means using less electricity while maintaining the same level of
+performance.
+Examples include:
+• LED lighting
+• High-efficiency HVAC systems
+• Smart thermostats
+• Motion sensor lighting
+• Efficient electrical motors
+
+Building Energy Monitoring
+Building energy monitoring continuously tracks electricity consumption using smart
+meters and centralized dashboards.
+Common monitored metrics include:
+• Hourly electricity consumption
+• Daily consumption
+
+Answer:
+The answer is generated from the retrieved energy management documents.
+
+[SUCCESS] Pipeline Finished Successfully
