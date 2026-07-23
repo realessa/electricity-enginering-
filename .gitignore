@@ -1,0 +1,41 @@
+# --- Secrets / environment ---
+.env
+*.env
+*api_key*
+credentials.json
+
+# --- Generated pipeline data (Delta Lake tables) ---
+bronze/
+silver/
+gold/
+
+# --- RAG vector store ---
+chroma_db/
+
+# --- Airflow runtime ---
+logs/
+plugins/
+airflow.db
+airflow-webserver.pid
+standalone_admin_password.txt
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# --- Spark / Delta ---
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+_delta_log/
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

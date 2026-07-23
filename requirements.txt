@@ -1,0 +1,17 @@
+kafka-python
+pydantic
+pandas
+pandera
+pyspark
+delta-spark
+apache-airflow
+openlineage-python
+chromadb
+sentence-transformers
+rank-bm25
+langchain
+langchain-community
+langchain-text-splitters
+pypdf
+transformers
+torch
